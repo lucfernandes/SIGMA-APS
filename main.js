@@ -1,6 +1,9 @@
 const { exec } = require('child_process');
 const {app, BrowserWindow, ipcMain} = require('electron')
 const path = require('path')
+const dotenv = require('dotenv');
+
+dotenv.config({path: './.env'});
 
 try {
     require('electron-reloader')(module)
