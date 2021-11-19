@@ -18,11 +18,7 @@
     </head>
     <body
         style="width: 100vw; height: 100vh"
-        class="
-            bg-white
-            d-flex
-            flex-column
-        "
+        class="bg-white d-flex flex-column"
         id="painel"
     >
         <nav
@@ -41,22 +37,141 @@
                 >Deslogar do SIGMA</a
             >
         </nav>
-        <div class="content w-100 h-100 py-5" style="max-height: 100%;overflow-y: scroll;">
-            <div
-                class="
-                    container
-                    w-100
-                    h-100
-                    d-flex
-                    flex-column
-                "
-            >
+        <div
+            class="content w-100 h-100 py-5"
+            style="max-height: 100%; overflow-y: scroll"
+        >
+            <div class="container w-100 h-100 d-flex flex-column">
+                <a href="./acesso.html" class="text-muted" style="font-size: 1.4rem;text-decoration: none;width: fit-content;">Voltar para o painel</a>
                 <h1 class="text-center sigma_text_color">Agrotóxicos</h1>
                 <div class="w-100">
                     <canvas id="agrotoxicos" height="100px"></canvas>
-                    <h2 class="text-center sigma_text_color">Tabela de Agrotóxicos Autorizados 2021</h2>
-                    <table>
-
+                    <p class="mb-5 text-muted" style="text-align: right;font-size: 1.4rem;">Fonte: Ministério da Agricultura - 01/2021</p>
+                    <h2 class="text-center sigma_text_color mt-5 mb-2">
+                        Tabela de Agrotóxicos Autorizados 2021
+                    </h2>
+                    <table class="table table-bordered" style="font-size: 1.4rem;">
+                        <thead>
+                            <tr class="sigma_bg_color">
+                                <th>Alimento</th>
+                                <th>Autorizado</th>
+                                <th>Nome da Substância</th>
+                                <th>Tipo</th>
+                                <th>Ingrediente Ativo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Maracujá</td>
+                                <td>SIM</td>
+                                <td>BIFENTRINA</td>
+                                <td>Quimico</td>
+                                <td>BIFENTRINA</td>
+                            </tr>
+                            <tr>
+                                <td>Kiwi</td>
+                                <td>SIM</td>
+                                <td>METOMIL</td>
+                                <td>Quimico</td>
+                                <td>METOMIL</td>
+                            </tr>
+                            <tr>
+                                <td>Melão</td>
+                                <td>SIM</td>
+                                <td>METOMIL</td>
+                                <td>Quimico</td>
+                                <td>METOMIL</td>
+                            </tr>
+                            <tr>
+                                <td>Mandioca</td>
+                                <td>SIM</td>
+                                <td>AMETRINA</td>
+                                <td>Quimico</td>
+                                <td>AMETRINA</td>
+                            </tr>
+                            <tr>
+                                <td>Cacau</td>
+                                <td>SIM</td>
+                                <td>BIFENTRINA</td>
+                                <td>Quimico</td>
+                                <td>BIFENTRINA</td>
+                            </tr>
+                            <tr>
+                                <td>Batata</td>
+                                <td>SIM</td>
+                                <td>Flubendiamida</td>
+                                <td>Quimico</td>
+                                <td>Flubendiamida</td>
+                            </tr>
+                            <tr>
+                                <td>Framboesa</td>
+                                <td>SIM</td>
+                                <td>BIFENTRINA</td>
+                                <td>Quimico</td>
+                                <td>BIFENTRINA</td>
+                            </tr>
+                            <tr>
+                                <td>Morango</td>
+                                <td>SIM</td>
+                                <td>BIFENTRINA</td>
+                                <td>Quimico</td>
+                                <td>BIFENTRINA</td>
+                            </tr>
+                            <tr>
+                                <td>Romã</td>
+                                <td>SIM</td>
+                                <td>BIFENTRINA</td>
+                                <td>Quimico</td>
+                                <td>BIFENTRINA</td>
+                            </tr>
+                            <tr>
+                                <td>Mamão</td>
+                                <td>SIM</td>
+                                <td>METOMIL</td>
+                                <td>Quimico</td>
+                                <td>METOMIL</td>
+                            </tr>
+                            <tr>
+                                <td>Manga</td>
+                                <td>SIM</td>
+                                <td>METOMIL</td>
+                                <td>Quimico</td>
+                                <td>METOMIL</td>
+                            </tr>
+                            <tr>
+                                <td>Framboesa</td>
+                                <td>SIM</td>
+                                <td>METOMIL</td>
+                                <td>Quimico</td>
+                                <td>METOMIL</td>
+                            </tr>
+                            <tr>
+                                <td>Acerola</td>
+                                <td>SIM</td>
+                                <td>BIFENTRINA</td>
+                                <td>Quimico</td>
+                                <td>BIFENTRINA</td>
+                            </tr>
+                            <tr>
+                                <td>Amora</td>
+                                <td>SIM</td>
+                                <td>BIFENTRINA</td>
+                                <td>Quimico</td>
+                                <td>BIFENTRINA</td>
+                            </tr>
+                            <tr>
+                                <td>Feijão caupi</td>
+                                <td>SIM</td>
+                                <td>Flubendiamida</td>
+                                <td>Quimico</td>
+                                <td>Flubendiamida</td>
+                            </tr>
+                            <tr>
+                                <td colspan="5">
+                                    <p class="mb-0 text-muted" style="text-align: right;font-size: 1.4rem;">Fonte: Ministério da Agricultura - 11/2021</p>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
             </div>
@@ -72,14 +187,7 @@
             const myChart = new Chart(ctx, {
                 type: "bar",
                 data: {
-                    labels: [
-                        "2015",
-                        "2016",
-                        "2017",
-                        "2018",
-                        "2019",
-                        "2020",
-                    ],
+                    labels: ["2015", "2016", "2017", "2018", "2019", "2020"],
                     datasets: [
                         {
                             label: "Registros por Ano",
