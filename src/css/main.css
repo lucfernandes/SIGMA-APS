@@ -4,10 +4,10 @@
     --sigma-color-primary-darker: #0e9c61;
 
     --sigma-color-white: #fff;
-    --sigma-color-cinza-claro: #fff;
-    --sigma-color-cinza: #fff;
-    --sigma-color-cinza-escuro: #fff;
-    --sigma-color-preto: #000;
+    --sigma-color-lightgray: #dfdfe7;
+    --sigma-color-gray: #979797;
+    --sigma-color-darkgray: #383838;
+    --sigma-color-black: #000;
 
     --sigma-color-texto-principal: #383838;
     font-size: 62.5%;
@@ -22,6 +22,12 @@ html {
 }
 .sigma_bg_color {
     background-color: var(--sigma-color-primary);
+}
+.sigma_bg_color_darker {
+    background-color: var(--sigma-color-primary-darker);
+}
+.sigma_bg_color_lightgray {
+    background-color: var(--sigma-color-lightgray);
 }
 .sigma_text_color {
     color: var(--sigma-color-primary-darker);
@@ -45,6 +51,20 @@ html {
     margin-bottom: 25px;
     border-radius: 10px;
     color: var(--sigma-color-white);
+}
+.btn-logout{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: var(--sigma-color-primary-darker);
+    background-color: var(--sigma-color-white);
+    width: 200px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 15px;
 }
 .loading-content {
     position: relative;
@@ -97,4 +117,88 @@ html {
 .logotipo{
   width: 100%;
   max-width: 250px;
+}
+/* ===================== PAINEL PRINCIPAL ===================== */
+#painel img#imagem_perfil{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-bottom: 15px;
+}
+#painel p.campo{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 700;
+    color: var(--sigma-color-primary-darker);
+}
+#painel span.campo_label{
+    color: var(--sigma-color-gray);
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: lowercase;
+}
+#painel .topoConteudo{
+    font-size: 1.8rem;
+    color: var(--sigma-color-primary-darker);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#painel .wrapperConteudo{
+    flex: 1;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr auto;
+    grid-template-areas: 
+        "buttons1 buttons2 buttons3"
+        "buttons4 buttons5 buttons6"
+        "action action action"
+    ;
+}
+#painel a.button-actions{
+    background: var(--sigma-color-primary-darker);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    width: 135px;
+    height: 135px;
+    border-radius: 15px;
+    font-size: 1.6rem;
+    text-align: center;
+    color: var(--sigma-color-white);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.6rem;
+}
+#painel a.button-actions img{
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+#painel a.button-actions.disabledFunction{
+    pointer-events: none;
+    filter: grayscale(1);
+    opacity: 0.5;
+}
+#painel a.button-denuncia{
+    background-color: var(--sigma-color-primary-darker);
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--sigma-color-white);
+    text-decoration: none;
+    border-radius: 15px;
+    padding: 15px 0;
+    text-transform: uppercase;
+    font-weight: 600;
 }

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <script src="../js/indexPages.js"></script>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,25 +13,76 @@
     <link rel="stylesheet" href="../css/main.css">
 
 </head>
-<body style="width: 100vw; height: 100vh;" class="bg-white d-flex flex-column justify-content-center align-items-center">
-    <nav class="sigma_bg_color w-100 py-4 px-5">
+<body style="width: 100vw; height: 100vh;" class="bg-white d-flex flex-column justify-content-center align-items-center" id="painel">
+    <nav class="sigma_bg_color_darker w-100 py-4 px-5 d-flex justify-content-between align-items-center">
         <img src="../images/SIGMA.svg" class="logotipo" alt="">
+        <a href="javascript:;" onclick="deslogar()" class="btn-logout">Deslogar do SIGMA</a>
     </nav>
     <div class="content w-100 flex-grow-1 py-5">
         <div class="container h-100">
-            <div class="row">
-                <div class="sigma_bg_color col-4">
-                    <img src="" alt="" >
-                    <p></p>
+            <div class="row h-100">
+                <div class="sigma_bg_color_lightgray col-4 p-5" style="border-radius: 15px;">
+                    <div class="conteudo h-100 d-flex flex-column justify-content-center align-items-center">
+                        <img src="" id="imagem_perfil">
+                        <p class="campo" id="nome_usuario"></p>
+                        <span class="campo_label">Usuário</span>
+                        <p class="campo" id="cargo"></p>
+                        <span class="campo_label">Cargo</span>
+                        <p class="campo" id="nivel"></p>
+                        <span class="campo_label">Nível de acesso</span>
+                    </div>
                 </div>
                 <div class="col-8">
-                    oi
+                    <div class="conteudo h-100 d-flex justify-content-center align-items-center flex-column">
+                        <header class="sigma_bg_color_lightgray w-100 text-center p-4 topoConteudo" style="border-radius: 15px;">
+                            Painel de Navegação
+                        </header>
+                        <div class="wrapperConteudo w-100">
+                            <div style="grid-area: buttons1;" class="d-flex justify-content-center align-items-center">
+                                <a href="/agrotoxicos" class="button-actions" id="agrotoxicos">
+                                    <img src="../icons/agrotoxicos.svg" alt="">
+                                    Agrotóxicos
+                                </a>
+                            </div>
+                            <div style="grid-area: buttons2;" class="d-flex justify-content-center align-items-center">
+                                <a href="/propriedades" class="button-actions" id="propriedades">
+                                    <img src="../icons/propriedades.svg" alt="">
+                                    Propriedades Irregulares
+                                </a>
+                            </div>
+                            <div style="grid-area: buttons3;" class="d-flex justify-content-center align-items-center">
+                                <a href="/investimento" class="button-actions" id="investimento">
+                                    <img src="../icons/investimento.svg" alt="">
+                                    Investimento
+                                </a>
+                            </div>
+                            <div style="grid-area: buttons4;" class="d-flex justify-content-center align-items-center">
+                                <a href="/arquivos" class="button-actions" id="arquivos">
+                                    <img src="../icons/arquivos.svg" alt="">
+                                    Arquivos
+                                </a>
+                            </div>
+                            <div style="grid-area: buttons5;" class="d-flex justify-content-center align-items-center">
+                                <a href="/telefones" class="button-actions" id="telefones">
+                                    <img src="../icons/telefones.svg" alt="">
+                                    Telefones Úteis
+                                </a>
+                            </div>
+                            <div style="grid-area: buttons6;" class="d-flex justify-content-center align-items-center">
+                                <a href="/noticias" class="button-actions" id="noticias">
+                                    <img src="../icons/noticias.svg" alt="">
+                                    Notícias
+                                </a>
+                            </div>
+                            <a href="" class="button-denuncia" style="grid-area: action;">
+                                Clique aqui e registre sua denúncia!
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-    <script src="../js/faceRecognition.js" defer></script>
 </body>
 </html>
