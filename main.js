@@ -26,7 +26,7 @@ function createWindow() {
 
     win.loadFile('./src/views/index.html');
 
-    win.webContents.openDevTools()
+    win.webContents.openDevTools();
 
 }
 
@@ -48,14 +48,3 @@ ipcMain.on('request-mainprocess-action', (event, arg)=>{
     console.log(arg);
 })
 
-/* exec("py commands/index.py", (error, stdout, stderr) => {
-    if (error) {
-        console.log(`error: ${error.message}`);
-        return;
-    }
-    if (stderr) {
-        console.log(`stderr: ${stderr}`);
-        return;
-    }
-    console.log(`stdout: ${stdout}`);
-}); */

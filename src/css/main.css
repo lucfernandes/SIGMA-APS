@@ -1,6 +1,6 @@
 :root {
     --sigma-color-primary-light: #8effd0;
-    --sigma-color-primary: #41F0A7;
+    --sigma-color-primary: #41f0a7;
     --sigma-color-primary-darker: #0e9c61;
 
     --sigma-color-white: #fff;
@@ -20,17 +20,17 @@
 html {
     scroll-behavior: smooth;
 }
-.sigma_bg_color{
+.sigma_bg_color {
     background-color: var(--sigma-color-primary);
 }
-.sigma_text_color{
+.sigma_text_color {
     color: var(--sigma-color-primary-darker);
 }
-.sigma_btn_primary{
+.sigma_btn_primary {
     font-size: 1.6rem;
     font-weight: 600;
     text-decoration: none;
-    color: var(--sigma-color-white)!important;
+    color: var(--sigma-color-white) !important;
     display: inline-flex;
     padding: 10px 20px;
     margin-top: 25px;
@@ -38,14 +38,13 @@ html {
     border-radius: 10px;
     outline: none;
 }
-.sigma_alert{
+.sigma_alert {
     display: inline-flex;
     font-size: 1.6rem;
     padding: 10px 20px;
     margin-bottom: 25px;
     border-radius: 10px;
     color: var(--sigma-color-white);
-    
 }
 .loading-content {
     position: relative;
@@ -55,9 +54,10 @@ html {
     margin: 100px auto;
     overflow: hidden;
     background: var(--sigma-color-white);
-    box-shadow: 10px 10px 20px var(--sigma-color-primary-darker), -10px -10px 20px var(--sigma-color-primary-light);
-  }
-  .loading-content .loading-content__center-part {
+    box-shadow: 10px 10px 20px var(--sigma-color-primary-darker),
+        -10px -10px 20px var(--sigma-color-primary-light);
+}
+.loading-content .loading-content__center-part {
     position: relative;
     top: 50%;
     z-index: 999;
@@ -68,8 +68,8 @@ html {
     border-radius: 100%;
     background: var(--sigma-color-primary);
     box-shadow: inset 5px 5px 20px #cfcfcf, inset -5px -5px 20px #fdfdfd;
-  }
-  .loading-content .loading-content__loader {
+}
+.loading-content .loading-content__loader {
     position: absolute;
     left: 92.5px;
     /* (width of loading-content / 2) - (width of content__loader / 2) */
@@ -77,20 +77,24 @@ html {
     height: 100%;
     width: 15px;
     -webkit-animation: spin 2s infinite linear;
-  }
-  .loading-content .loading-content__loader .loading-content__loader-content {
+}
+.loading-content .loading-content__loader .loading-content__loader-content {
     height: 40px;
     width: 100%;
     background-color: var(--sigma-color-primary-darker);
     box-shadow: 0 0 10px 1px var(--sigma-color-primary-darker);
-  }
-  
-  /* Spin endless */
-  @-webkit-keyframes spin {
+}
+
+/* Spin endless */
+@-webkit-keyframes spin {
     0% {
-      -webkit-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     }
     100% {
-      -webkit-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
     }
-  }
+}
+.logotipo{
+  width: 100%;
+  max-width: 250px;
+}

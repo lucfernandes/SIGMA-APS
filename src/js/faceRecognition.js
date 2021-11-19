@@ -1,16 +1,36 @@
 function initFaceRecognition(event) {
+
     event.preventDefault();
 
     defineLoading(true);
 
     const { exec } = require ('child_process');
+    const path = require('path');
 
     exec("py commands/index.py", (error, stdout, stderr) => {
         if (error) {
             console.log(`error: ${error.message}`);
-            return;
+            return false;
         }
-        validaUsuario(stdout)
+        let jsonResult = validaUsuario(stdout);
+
+        if(jsonResult){
+
+            const {consultaUsuario} = require('../models/tbl_usuarios');
+            
+            consultaUsuario(jsonResult.user).then(function (result) {
+                console.log('cheguei aqui');
+                console.log(result);
+                localStorage.setItem('usuarioDados',JSON.stringify(result))
+                window.location.href = path.join(__dirname,`/acesso.html`)
+            })
+
+        }else{
+            defineLoading(false);
+            alertDom.classList.add('bg-danger');
+            alertDom.innerText = "Usuário não identificado";
+            alertDom.classList.remove('d-none');
+        }
     });
 
 }
@@ -38,16 +58,12 @@ function validaUsuario(respostaServidor) {
 
     const jsonReturned = JSON.parse(respostaServidor)    
 
+    console.log(jsonReturned.Status);
+
     if(jsonReturned.Status != 200){
-        defineLoading(false);
-        alertDom.classList.add('bg-danger');
-        alertDom.innerText = "Usuário não encontrado";
-        // alertDom.innerText = window.location.href;
-        alertDom.classList.remove('d-none');
+        return false;
     }else{
-        
+        return jsonReturned;
     }
 
 }
-
-validaUsuario(teste)

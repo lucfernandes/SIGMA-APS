@@ -14,8 +14,9 @@
     <div class="content w-100 h-100 d-flex flex-column justify-content-center align-items-center" id="conteudoTela">
         <div id="alert" class="d-none sigma_alert"></div>
         <img src="../images/SIGMA.svg" alt="">
-        <a href="javascript:;" class="sigma_btn_primary" onclick="initFaceRecognition(event)">Acessar Plataforma</a>
-
+        <form action="./painel.html" method="post" onsubmit="initFaceRecognition(event)">
+            <button type="submit" class="sigma_btn_primary">Acessar Plataforma</button>
+        </form>
     </div>
     <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center d-none" id="loadingPage">
         <h1 class="text-center sigma_text_color">Aguarde o carregamento do<br>reconhecimento facial</h1>
